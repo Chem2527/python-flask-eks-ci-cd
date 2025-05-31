@@ -19,29 +19,37 @@ This project demonstrates a complete DevOps pipeline to provision AWS infrastruc
 ##  Project Structure
 
 ```bash
-
-├── Dockerfile # Dockerfile for Flask app
-├── README.md # Setup documentation
-├── app.py # Sample Flask app
-├── requirements.txt # Python dependencies
-
-├── jenkins/
-│ └── Jenkinsfile # CI/CD pipeline stages
-
-├── k8s/
-│ ├── deployment.yml # K8s deployment definition
-│ └── service.yml # K8s service (LoadBalancer)
-
-├── modules/ # Modular Terraform structure
-│ ├── ecr/ # ECR repository setup
-│ ├── eks/ # EKS cluster configuration
-│ ├── s3/ # S3 backend for remote state
-│ └── vpc/ # VPC, subnets, gateway, etc.
-
-
-├── main.tf # Root Terraform configuration
-├── outputs.tf # Terraform outputs
-└── variables.tf # Terraform variables
+.
+|-- Dockerfile
+|-- README.md
+|-- app.py
+|-- jenkins
+|   `-- Jenkinsfile
+|-- k8s
+|   |-- deployment.yml
+|   `-- service.yml
+|-- modules
+|   |-- ecr
+|   |   |-- main.tf
+|   |   |-- outputs.tf
+|   |   `-- variables.tf
+|   |-- eks
+|   |   |-- main.tf
+|   |   |-- outputs.tf
+|   |   `-- variables.tf
+|   |-- s3
+|   |   |-- main.tf
+|   |   |-- outputs.tf
+|   |   `-- variables.tf
+|   `-- vpc
+|       |-- main.tf
+|       |-- outputs.tf
+|       `-- variables.tf
+|-- requirements.txt
+`-- terraform
+    |-- main.tf
+    |-- outputs.tf
+    `-- variables.tf
 ```
 
 
