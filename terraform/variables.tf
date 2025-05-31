@@ -177,3 +177,13 @@ variable "aws_region" {
   default     = "eu-north-1"  # Replace with your desired default region
 }
 
+variable "ecr_repository_name" {
+    description = "The name of the ECR repository"
+    type        = string
+    default     = "my-ecr-repo"
+}
+variable "ecr_image_tag_mutability" {
+    description = "The tag mutability setting for the repository. Valid values are MUTABLE or IMMUTABLE."
+    type        = string
+    default     = "MUTABLE"
+}
