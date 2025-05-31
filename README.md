@@ -134,7 +134,6 @@ python app.py
 
 - Deploy Flask app on EKS using Kubernetes manifests
 
-- Configure Horizontal Pod Autoscaler (HPA)
 
 
 ### 6. Kubernetes Deployment
