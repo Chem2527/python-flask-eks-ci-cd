@@ -102,8 +102,6 @@ python app.py
 
 - Kubernetes CLI (kubectl)
 
--   
-
 - Add credentials in Jenkins:
 
 - AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
@@ -115,7 +113,6 @@ python app.py
 - KUBECONFIG (for EKS access)
 
 - Git (for GitHub auth)
-
 
 - Create a new Jenkins Pipeline job:
 
