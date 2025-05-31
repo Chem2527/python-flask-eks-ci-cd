@@ -151,7 +151,7 @@ Then expose the service:
 ```bash
 kubectl get svc my-app-service
 ```
-- Access your app at the external LoadBalancer URL.
+- Access your app using service external IP.
 <img width="446" alt="image" src="https://github.com/user-attachments/assets/f43c00ac-ee96-4e7a-a76a-3a48a5e15f08" />
 
 
