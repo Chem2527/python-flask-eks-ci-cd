@@ -134,6 +134,8 @@ python app.py
 
 - Deploy Flask app on EKS using Kubernetes manifests
 
+- Credentials stored in jenkins
+  <img width="849" alt="image" src="https://github.com/user-attachments/assets/535e8a8d-24a1-46ed-a930-e6647ae506f7" />
 
 
 ### 6. Kubernetes Deployment
@@ -150,4 +152,6 @@ Then expose the service:
 kubectl get svc my-app-service
 ```
 - Access your app at the external LoadBalancer URL.
+  <img width="446" alt="image" src="https://github.com/user-attachments/assets/f43c00ac-ee96-4e7a-a76a-3a48a5e15f08" />
+
 
