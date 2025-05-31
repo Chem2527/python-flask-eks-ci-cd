@@ -1,20 +1,16 @@
 
-markdown
-Copy
-Edit
-# 🚀 Full-Stack DevOps Project: Terraform | Jenkins | EKS | ECR | Flask
+#  DevOps Project: Terraform | Jenkins | EKS | ECR | Python Flask App
 
 This project demonstrates a complete DevOps pipeline to provision AWS infrastructure using **Terraform**, build and deploy a **Flask** web application via **Docker** and **AWS ECR**, and automate the CI/CD process with **Jenkins** and **Kubernetes on EKS**.
 
----
 
-## 📦 Deliverables
+## Deliverables
 
-✅ **Infrastructure as Code (Terraform)**  
-✅ **Dockerfile for Flask App**  
-✅ **Jenkins Pipeline (Jenkinsfile)**  
-✅ **Kubernetes Deployment and Service YAMLs**  
-✅ **Detailed Setup Instructions (README)**
+- **Infrastructure as Code (Terraform)**  
+- **Dockerfile for Flask App**  
+- **Jenkins Pipeline (Jenkinsfile)**  
+- **Kubernetes Deployment and Service YAMLs**  
+- **Detailed Setup Instructions (README)**
 
 ---
 
