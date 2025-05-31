@@ -1,10 +1,10 @@
 
-#  DevOps Project: Terraform | Jenkins | EKS | ECR | Python Flask App
+#  DevOps Project:  Python Flask App | DOCKERFILE | Terraform | Jenkins | AWS EKS | ECR | VPC | DEPLOYMENT YAML | SERVIVCE YAML | HPA |
 
 This project demonstrates a complete DevOps pipeline to provision AWS infrastructure using **Terraform**, build and deploy a **Flask** web application via **Docker** and **AWS ECR**, and automate the CI/CD process with **Jenkins** and **Kubernetes on EKS**.
 
 
-## Deliverables
+##   Deliverables
 
 - **Infrastructure as Code (Terraform)**  
 - **Dockerfile for Flask App**  
@@ -14,9 +14,10 @@ This project demonstrates a complete DevOps pipeline to provision AWS infrastruc
 
 ---
 
-## 🧱 Project Structure
+##  Project Structure
 
-.
+```bash
+
 ├── Dockerfile # Dockerfile for Flask app
 ├── README.md # Setup documentation
 ├── app.py # Sample Flask app
@@ -35,29 +36,25 @@ This project demonstrates a complete DevOps pipeline to provision AWS infrastruc
 │ ├── s3/ # S3 backend for remote state
 │ └── vpc/ # VPC, subnets, gateway, etc.
 
-└── terraform/
+
 ├── main.tf # Root Terraform configuration
 ├── outputs.tf # Terraform outputs
 └── variables.tf # Terraform variables
+```
 
-yaml
-Copy
-Edit
 
----
 
-## 🚀 Setup Instructions
+##   Setup Instructions
 
-### ✅ Prerequisites
+###  Prerequisites
 
 - AWS CLI configured (`aws configure`)
-- Terraform ≥ v1.3
+- Terraform installed
 - Docker installed
-- A running Jenkins server (e.g., on EC2 or Docker)
+- A running Jenkins server (on EC2)
 - kubectl installed
 - AWS IAM user with sufficient permissions
-- ECR repository (or create using Terraform/Jenkins)
-
+- ECR repository (or create using Terraform)
 ---
 
 ### 1. Clone the Repository
@@ -65,94 +62,94 @@ Edit
 ```bash
 git clone https://github.com/<your-username>/<repo-name>.git
 cd <repo-name>
-2. Provision Infrastructure Using Terraform
-bash
-Copy
-Edit
-cd terraform
+```
+
+### 2. Provision Infrastructure Using Terraform
+
+```bash
+cd <repo-name>
 terraform init
 terraform apply
-This provisions:
+```
 
-VPC with public/private subnets
+- This provisions:
 
-EKS cluster
+- VPC with public/private subnets
 
-S3 backend (if enabled)
+- EKS cluster
 
-Security groups and routing
+- S3 backend
 
-Outputs required for Jenkins/EKS access
+- Outputs required for Jenkins/EKS access
 
-3. Flask Application (Local Test)
-Run the Flask app locally to validate:
+### 3. Flask Application 
 
-bash
-Copy
-Edit
+- Run the Flask app locally to validate:
+
+```bash
 pip install -r requirements.txt
 python app.py
-4. Jenkins Pipeline Setup
-Install required Jenkins plugins:
+```
+### 4. Jenkins Pipeline Setup
 
-Docker Pipeline
+- Install required Jenkins plugins:
 
-Git
+- Docker Pipeline
 
-AWS CLI (via shell)
+- Git
 
-Kubernetes CLI (kubectl)
+- AWS CLI (via shell)
 
-Slack (optional)
+- Kubernetes CLI (kubectl)
 
-Add credentials in Jenkins:
+- Slack 
 
-AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+- Add credentials in Jenkins:
 
-AWS_ACCOUNT_ID
+- AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
-ECR_REPO_NAME
+- AWS_ACCOUNT_ID
 
-KUBECONFIG (for EKS access)
+- ECR_REPO_NAME
 
-Git (for GitHub auth)
+- KUBECONFIG (for EKS access)
 
-newslack (for Slack integration)
+- Git (for GitHub auth)
 
-Create a new Jenkins Pipeline job:
 
-Use pipeline script from jenkins/Jenkinsfile
+- Create a new Jenkins Pipeline job:
 
-5. CI/CD Pipeline Breakdown
-The pipeline automates:
+- Use pipeline script from jenkins/Jenkinsfile
 
-✅ Source code checkout (Git)
+### 5. CI/CD Pipeline Breakdown
 
-✅ Build Docker image
+- The pipeline automates:
 
-✅ Push image to AWS ECR
+-  Source code checkout (Git)
 
-✅ Configure kubectl for EKS
+- Build Docker image
 
-✅ Deploy Flask app on EKS using Kubernetes manifests
+- Push image to AWS ECR
 
-✅ Configure Horizontal Pod Autoscaler (HPA)
+- Configure kubectl for EKS
 
-✅ Slack notifications on success/failure
+- Deploy Flask app on EKS using Kubernetes manifests
 
-6. Kubernetes Deployment
-Apply Kubernetes manifests manually or via Jenkins:
+- Configure Horizontal Pod Autoscaler (HPA)
 
-bash
-Copy
-Edit
+
+### 6. Kubernetes Deployment
+- Apply Kubernetes manifests manually or via Jenkins:
+
+```bash
 kubectl apply -f k8s/deployment.yml
 kubectl apply -f k8s/service.yml
+```
+
 Then expose the service:
 
-bash
-Copy
-Edit
+```bash
 kubectl get svc my-app-service
-Access your app at the external LoadBalancer URL.
+```
+- Access your app at the external LoadBalancer URL.
 
