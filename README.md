@@ -1,5 +1,5 @@
 
-#  DevOps Project:  Python Flask App | DOCKERFILE | Terraform | Jenkins | AWS EKS | ECR | VPC | DEPLOYMENT YAML | SERVIVCE YAML | HPA |
+#  DevOps Project:  Python Flask App | Dockerfile | Terraform | Jenkins | Aws Eks | ECR | VPC | DEPLOYMENT YAML | SERVIVCE YAML | HPA 
 
 This project demonstrates a complete DevOps pipeline to provision AWS infrastructure using **Terraform**, build and deploy a **Flask** web application via **Docker** and **AWS ECR**, and automate the CI/CD process with **Jenkins** and **Kubernetes on EKS**.
 
@@ -102,7 +102,7 @@ python app.py
 
 - Kubernetes CLI (kubectl)
 
-- Slack 
+-   
 
 - Add credentials in Jenkins:
 
